@@ -104,7 +104,7 @@ function answerGo() {
 }
 
 function showResult() {
-   title.innerText = ` Wonderful!!!`
+   title.innerText = score <= Math.floor(questionsList.length /2)  ? 'You can do better' : 'Wonderful!!!'
    answerList.innerHTML = `<p> You answered to  ${score} of ${questionsList.length}</p>`
    btn.innerText = `Try again?`
    btn.removeEventListener('click', answerGo)
